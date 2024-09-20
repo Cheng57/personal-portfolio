@@ -292,3 +292,74 @@ section {
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
+
+/*Services style*/
+.main-text {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--hover-color);
+}
+
+.main-text span {
+  color: var(--text-lightgray-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.main-text h2 {
+  font-weight: 700;
+  font-size: var(--normal-font);
+}
+
+.section-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.service-box {
+  width: min(100%, 18rem);
+  height: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--second-background-color);
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+.service-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.service-box:hover {
+  transform: translateY(-0.8rem);
+}
+
+.service-icon {
+  border: 2px, solid var(--hover-color);
+  padding: 2rem;
+  background-color: var(--background-color);
+  color: var(--hover-color);
+  border-radius: 50%;
+  font-size: 3rem;
+  outline: 3px solid var(--background-color);
+  box-shadow: var(--neon-box-shadow);
+}
+
+.service-box h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.service-box p {
+  margin: 0.5rem 0 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--text-lightgray-color);
+  line-height: 1.6;
+}
