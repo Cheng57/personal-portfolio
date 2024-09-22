@@ -412,52 +412,31 @@ section {
 }
 
 /* Create progress bar in each skill bar*/
-.skill-bar .bar.html::before {
+.skill-bar .bar::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 72%;
+  width: 0;
   height: 10px;
   background-color: var(--hover-color);
   border-radius: 25px;
-  animation: progressbar-html 1s;
+}
+
+.skill-bar .bar.html::before {
+  animation: progressbar-html 1s linear forwards;
 }
 
 .skill-bar .bar.figma::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  height: 10px;
-  background-color: var(--hover-color);
-  border-radius: 25px;
-  animation: progressbar-figma 1s;
+  animation: progressbar-figma 1s linear forwards;
 }
 
 .skill-bar .bar.javascript::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 10px;
-  background-color: var(--hover-color);
-  border-radius: 25px;
-  animation: progressbar-javascript 1s;
+  animation: progressbar-javascript 1s linear forwards;
 }
 
 .skill-bar .bar.css::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 62%;
-  height: 10px;
-  background-color: var(--hover-color);
-  border-radius: 25px;
-  animation: progressbar-css 1s;
+  animation: progressbar-css 1s linear forwards;
 }
 
 /* Create animation for each progress bar */
