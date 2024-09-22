@@ -363,3 +363,136 @@ section {
   color: var(--text-lightgray-color);
   line-height: 1.6;
 }
+
+/*Skills style*/
+.skills {
+  background-color: var(--second-background-color);
+}
+
+.section-skills {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.skill-left,
+.skill-right {
+  width: min(100%, 22rem);
+  height: auto;
+  padding: 2rem 1rem;
+}
+
+.skill-bar {
+  margin-bottom: 2.3rem;
+}
+
+.section-skills h3 {
+  margin-bottom: 2rem;
+  font-size: var(--normal-font);
+  text-align: center;
+}
+
+/* skill left */
+.skill-bar .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.skill-bar .bar {
+  height: 10px;
+  background-color: var(--background-color);
+  border-radius: 25px;
+  margin-top: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--neon-box-shadow);
+}
+
+/* Create progress bar in each skill bar*/
+.skill-bar .bar.html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72%;
+  height: 10px;
+  background-color: var(--hover-color);
+  border-radius: 25px;
+  animation: progressbar-html 1s;
+}
+
+.skill-bar .bar.figma::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 10px;
+  background-color: var(--hover-color);
+  border-radius: 25px;
+  animation: progressbar-figma 1s;
+}
+
+.skill-bar .bar.javascript::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 10px;
+  background-color: var(--hover-color);
+  border-radius: 25px;
+  animation: progressbar-javascript 1s;
+}
+
+.skill-bar .bar.css::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 62%;
+  height: 10px;
+  background-color: var(--hover-color);
+  border-radius: 25px;
+  animation: progressbar-css 1s;
+}
+
+/* Create animation for each progress bar */
+@keyframes progressbar-html {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 72%;
+  }
+}
+
+@keyframes progressbar-figma {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progressbar-javascript {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes progressbar-css {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 62%;
+  }
+}
