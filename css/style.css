@@ -407,8 +407,6 @@ section {
   border-radius: 25px;
   margin-top: 25px;
   position: relative;
-  overflow: hidden;
-  box-shadow: var(--neon-box-shadow);
 }
 
 /* Create progress bar in each skill bar*/
@@ -421,6 +419,7 @@ section {
   height: 10px;
   background-color: var(--hover-color);
   border-radius: 25px;
+  box-shadow: var(--neon-box-shadow);
 }
 
 .skill-bar .bar.html::before {
