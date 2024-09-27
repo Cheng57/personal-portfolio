@@ -21,3 +21,6 @@ const pointFunction = function (element) {
 };
 
 circles.forEach(pointFunction);
+
+// Filter portfolio with MixItUp
+var mixer = mixitup(".portfolio-gallery");
