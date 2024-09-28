@@ -138,7 +138,7 @@ section {
   height: 45px;
 }
 
-.btn-box a.btn {
+.btn-box .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,11 +157,11 @@ section {
   border: var(--border);
 }
 
-.btn-box a.btn:hover {
+.btn-box .btn:hover {
   color: var(--hover-color);
 }
 
-.btn-box a.btn::before {
+.btn-box .btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -173,20 +173,20 @@ section {
   z-index: -1;
 }
 
-.btn-box a.btn:hover::before {
+.btn-box .btn:hover::before {
   width: 100%;
 }
 
-.btn-box a.btn:nth-child(2) {
+.btn-box .btn:nth-child(2) {
   background-color: var(--background-color);
   color: var(--hover-color);
 }
 
-.btn-box a.btn:nth-child(2)::before {
+.btn-box .btn:nth-child(2)::before {
   background-color: var(--hover-color);
 }
 
-.btn-box a.btn:nth-child(2):hover {
+.btn-box .btn:nth-child(2):hover {
   color: var(--background-color);
 }
 
@@ -640,4 +640,33 @@ section {
 .portfolio-content a i {
   font-size: 1.3rem;
   color: var(--second-background-color);
+}
+
+/* Contact style */
+.contact {
+  background-color: var(--second-background-color);
+}
+form input,
+form textarea {
+  width: 100%;
+  margin: 0.3rem auto;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem;
+  color: var(--text-color);
+}
+
+form textarea {
+  resize: none;
+}
+
+form .btn-box {
+  width: 100%;
+  justify-content: center;
+}
+
+form button {
+  cursor: pointer;
+  font-size: 1rem;
 }
