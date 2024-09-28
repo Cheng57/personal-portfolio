@@ -535,3 +535,110 @@ section {
   font-weight: 600;
   font-size: 10px;
 }
+
+/*Portfolio style*/
+.filter-buttons {
+  margin: 2rem;
+  text-align: center;
+}
+
+.filter-buttons .btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-right: 1.5rem;
+  margin-top: 100px;
+  color: var(--text-color);
+}
+
+.filter-buttons .btn:hover {
+  color: var(--hover-color);
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-box {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--second-background-color);
+  align-items: center;
+  border: 2px solid var(--hover-color);
+  box-shadow: var(--neon-box-shadow);
+  position: relative;
+}
+.portfolio-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.5; */
+  transition: all 0.5s;
+}
+
+.portfolio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* hide content */
+  opacity: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), var(--hover-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.2rem;
+  transition: all 0.5s;
+}
+
+.portfolio-box:hover .portfolio-content {
+  /* display content */
+  opacity: 1;
+}
+
+.portfolio-box:hover .portfolio-image img {
+  transform: scale(1.1);
+}
+
+.portfolio-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.portfolio-content p {
+  font-size: 0.8rem;
+  margin: 5px 0 15px 0;
+}
+
+.portfolio-content a {
+  background-color: var(--text-color);
+  border: 1px solid var(--hover-color);
+  outline: 2px solid var(--text-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-content a i {
+  font-size: 1.3rem;
+  color: var(--second-background-color);
+}
