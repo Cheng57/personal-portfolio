@@ -59,7 +59,20 @@ body {
   align-items: center;
   width: 100%;
   padding: 20px 10%;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--second-background-color);
+  position: sticky;
+  top: 0;
+  z-index: 11;
 }
+
+/* .site-header.sticky {
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--second-background-color);
+  position: sticky;
+  top: 0;
+  z-index: 11;
+} */
 
 .site-header__logo {
   font-size: 26px;
@@ -86,6 +99,10 @@ span {
   text-shadow: var(--font-neon-text-shadow);
 }
 
+.site-header__nav-link.active {
+  color: var(--hover-color);
+}
+
 .site-header__menu-icon {
   font-size: 1.8rem;
   z-index: 10001;
@@ -98,6 +115,7 @@ span {
 }
 
 section {
+  min-height: 100vh;
   padding: 100px 10%;
 }
 
