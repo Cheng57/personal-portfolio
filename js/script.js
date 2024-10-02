@@ -12,6 +12,7 @@ const pointFunction = function (element) {
   for (let i = 0; i < dots; i++) {
     points += `<div class="point" style="--i:${i}; --rotate:${rotate}deg"></div>`;
   }
+
   element.innerHTML = points;
 
   const allPoints = element.querySelectorAll(".point");
@@ -28,7 +29,6 @@ var mixer = mixitup(".portfolio-gallery");
 // Active navigation bar
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".site-header__nav-link");
-const header = document.querySelector(".site-header");
 
 const options = {
   threshold: 0.2,
