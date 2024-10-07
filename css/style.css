@@ -54,25 +54,22 @@ body {
 
 /* Header style*/
 .site-header {
+  /* Makes it to which navbar is relative */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 20px 10%;
+}
+
+.site-header.sticky {
   background-color: var(--background-color);
   border-bottom: 1px solid var(--second-background-color);
   position: sticky;
   top: 0;
   z-index: 11;
 }
-
-/* .site-header.sticky {
-  background-color: var(--background-color);
-  border-bottom: 1px solid var(--second-background-color);
-  position: sticky;
-  top: 0;
-  z-index: 11;
-} */
 
 .site-header__logo {
   font-size: 26px;
@@ -103,7 +100,7 @@ span {
   color: var(--hover-color);
 }
 
-.site-header__menu-icon {
+#site-header__menu-icon {
   font-size: 1.8rem;
   z-index: 10001;
   cursor: pointer;
@@ -115,20 +112,16 @@ span {
 }
 
 section {
-  min-height: 100vh;
+  height: auto;
   padding: 100px 10%;
 }
 
 /* Home style */
 .home {
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  align-items: center;
-  column-gap: 4rem;
+  gap: 4rem;
 }
 
 .home-content h1 {
@@ -284,7 +277,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  column-gap: 4rem;
+  gap: 4rem;
   background-color: var(--second-background-color);
 }
 
@@ -349,7 +342,8 @@ section {
 }
 
 .service-box {
-  width: min(100%, 18rem);
+  /* width: min(100%, 18rem); */
+  width: 100%;
   height: auto;
   padding: 2rem 1rem;
   text-align: center;
@@ -571,7 +565,7 @@ section {
 
 /*Portfolio style*/
 .filter-buttons {
-  margin: 2rem;
+  margin: 2.5rem;
   text-align: center;
 }
 
@@ -706,7 +700,7 @@ form button {
 
 /* Footer style */
 footer {
-  padding: 1rem 10%;
+  padding: 20px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -726,4 +720,84 @@ footer a {
 footer a i {
   font-size: 1rem;
   color: var(--second-background-color);
+}
+
+/* Media queries */
+@media screen and (max-width: 990px) {
+  .site-header,
+  .site-header.sticky,
+  footer {
+    padding: 15px 5%;
+  }
+
+  section {
+    padding: 50px 5%;
+  }
+
+  .site-header__nav-link {
+    padding: 8px 15px;
+  }
+
+  :root {
+    --big-font: 2.2rem;
+    --normal-font: 1.8rem;
+    --neon-box-shadow: 0 0 0.6rem #12f2ff;
+    --h2-font: 3rem;
+  }
+
+  .social-icons {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #site-header__menu-icon {
+    display: block;
+    transition: all 0.5s ease;
+  }
+  /* Rotate menu icon */
+  #site-header__menu-icon.bx-x {
+    transform: rotate(180deg);
+  }
+
+  .site-header__nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* Hide navbar */
+    top: -500px;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 0 5%;
+    transition: all 0.5s ease;
+  }
+
+  .site-header__nav-list.open {
+    /* Move the list down by 100% of the height of the header, placing the top of the list directly below the bottom edge of the header */
+    top: 100%;
+  }
+
+  .site-header__nav-link {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    order: 2;
+  }
+  .about-content {
+    order: 1;
+  }
+
+  .section-skills {
+    grid-template-columns: 1fr;
+  }
 }
