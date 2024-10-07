@@ -800,4 +800,26 @@ footer a i {
   .section-skills {
     grid-template-columns: 1fr;
   }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+
+  .filter-buttons .btn {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  html {
+    font-size: 80%;
+  }
+
+  footer p {
+    font-size: 0.6rem;
+  }
+
+  .filter-buttons .btn {
+    font-size: 1rem;
+  }
 }
