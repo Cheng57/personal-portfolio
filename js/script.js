@@ -35,25 +35,39 @@ const options = {
 };
 
 const callback = (entries) => {
-  console.log(entries);
   entries.forEach((entry) => {
-    console.log(entry.target.id, entry.isIntersecting);
     if (entry.isIntersecting) {
       navLinks.forEach((link) => link.classList.remove("active"));
       const activeLink = document.querySelector(
-        `a.site-header__nav-link[href="#${entry.target.id}"]`
+        `a[href="#${entry.target.id}"]`
       );
       activeLink.classList.add("active");
     }
   });
 };
+
 const observer = new IntersectionObserver(callback, options);
 sections.forEach((section) => {
   observer.observe(section);
 });
 
-window.addEventListener("scroll", () => {
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
+// Sticky header
+const header = document.querySelector(".site-header");
+window.addEventListener("scroll", function () {
+  header.classList.toggle("sticky", window.scrollY > 10);
 });
+
+// Toggle icon navbar
+const menuIcon = document.querySelector("#site-header__menu-icon");
+const navbar = document.querySelector(".site-header__nav-list");
+
+menuIcon.onclick = function () {
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("open");
+};
+
+// Hide navbar and cross icon when screen is scrolled
+window.onscroll = function () {
+  menuIcon.classList.remove("bx-x");
+  navbar.classList.remove("open");
+};
