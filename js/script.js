@@ -85,17 +85,12 @@ const observer1 = new IntersectionObserver((entries) => {
   });
 });
 
-const scrollScale = document.querySelectorAll(".scroll-scale");
-scrollScale.forEach((el) => {
+const scrollFadeIn = document.querySelectorAll(".scroll-fadeIn");
+scrollFadeIn.forEach((el) => {
   observer1.observe(el);
 });
 
-const scrollTop = document.querySelectorAll(".scroll-top");
-scrollTop.forEach((el) => {
-  observer1.observe(el);
-});
-
-const scrollBottom = document.querySelectorAll(".scroll-bottom");
-scrollBottom.forEach((el) => {
+const scrollFlyIn = document.querySelectorAll(".scroll-flyIn");
+scrollFlyIn.forEach((el) => {
   observer1.observe(el);
 });
