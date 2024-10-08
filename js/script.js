@@ -37,6 +37,7 @@ const options = {
 const callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      console.log(entry.target.id);
       navLinks.forEach((link) => link.classList.remove("active"));
       const activeLink = document.querySelector(
         `a[href="#${entry.target.id}"]`
@@ -71,3 +72,30 @@ window.onscroll = function () {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("open");
 };
+
+// Fade in pages
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target.id);
+      entry.target.classList.add("show-content");
+    } else {
+      entry.target.classList.remove("show-content");
+    }
+  });
+});
+
+const scrollScale = document.querySelectorAll(".scroll-scale");
+scrollScale.forEach((el) => {
+  observer1.observe(el);
+});
+
+const scrollTop = document.querySelectorAll(".scroll-top");
+scrollTop.forEach((el) => {
+  observer1.observe(el);
+});
+
+const scrollBottom = document.querySelectorAll(".scroll-bottom");
+scrollBottom.forEach((el) => {
+  observer1.observe(el);
+});

@@ -771,6 +771,7 @@ footer a i {
     background-color: var(--background-color);
     padding: 0 5%;
     transition: all 0.5s ease;
+    z-index: 11;
   }
 
   .site-header__nav-list.open {
@@ -822,4 +823,28 @@ footer a i {
   .filter-buttons .btn {
     font-size: 1rem;
   }
+}
+
+/* Fade in page when it is scrolled to */
+.scroll-top {
+  opacity: 0;
+  transform: translateY(-300px);
+  transition: all 4s ease;
+}
+
+.scroll-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 2s ease;
+}
+
+.scroll-bottom {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: all 4s ease;
+}
+
+.show-content {
+  opacity: 1;
+  transform: scale(1);
 }
