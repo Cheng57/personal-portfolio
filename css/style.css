@@ -282,7 +282,8 @@ section {
 }
 
 .home-image img {
-  width: min(100%, 400px);
+  margin: 0px auto;
+  width: min(100%, 360px);
   height: auto;
   display: block;
 }
@@ -299,7 +300,7 @@ section {
 
 .about img {
   display: block;
-  width: min(100%, 400px);
+  width: min(100%, 360px);
   height: auto;
 }
 
@@ -810,6 +811,11 @@ footer a i {
   .about-img {
     order: 2;
   }
+
+  .about-img img {
+    margin: 0px auto;
+  }
+
   .about-content {
     order: 1;
   }
