@@ -466,7 +466,7 @@ section {
 }
 
 .skill-bar .bar.figma::before {
-  animation: progressbar-figma 1s linear forwards;
+  animation: progressbar-css 1s linear forwards;
 }
 
 .skill-bar .bar.javascript::before {
@@ -474,7 +474,7 @@ section {
 }
 
 .skill-bar .bar.css::before {
-  animation: progressbar-css 1s linear forwards;
+  animation: progressbar-react 1s linear forwards;
 }
 
 /* Create animation for each progress bar */
@@ -483,25 +483,7 @@ section {
     width: 0;
   }
   100% {
-    width: 72%;
-  }
-}
-
-@keyframes progressbar-figma {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes progressbar-javascript {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -510,7 +492,25 @@ section {
     width: 0;
   }
   100% {
-    width: 62%;
+    width: 95%;
+  }
+}
+
+@keyframes progressbar-javascript {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 92%;
+  }
+}
+
+@keyframes progressbar-react {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
   }
 }
 
